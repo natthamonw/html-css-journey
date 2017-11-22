@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Coding Journey - HTML</title>
+  <link rel="stylesheet" href="style-main.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat+Subrayada" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <!-- Navigation bar and header banner -->
+  <div id="css-banner">
+    <div class="navigation-bar">
+      <h1><i class="fa fa-code" aria-hidden="true" style="color:#3185FC"></i> My Coding Journey</h1>
+      <div class="navigation-links">
+        <table>
+          <tr>
+            <td><a href="landingpage.html">home</a></td>
+            <td><a href="www.html">www</a></td>
+            <td><a href="html.html">html</a></td>
+            <td><a href="css.html">css</a></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="banner-content-text">
+        <h1>CSS</h1>
+        <h2>Cascading Style Sheets</h2>
+    </div>
+  </div>
+  <!-- Content area starts here -->
+  <div class="main-text-area">
+    <h1><span>What is CSS?</span></h1>
+    <p>
+      CSS is the code writtent to give style to HTML elements. It is possible to
+      have several Cascading Style Sheets referenced by one HTML document. Along
+      with HTML and JavaScript, CSS is used by most websites to create visually
+      engaging webpages, user interfaces for web applications, and user interfaces
+      for many mobile applications.
+    </p>
+  </div>
+  <div class="main-text-area">
+    <h1><span>CSS Format</span></h1>
+    <p>
+      In the example below, the CSS <em>declaration</em> consists of a <em>selector</em>
+      (h1), one or more <em>properties</em> (background-color) with their <em>value</em>
+      (yellow), followed by a semicolon (;) and flanked by a pair of curly
+      brackets ({}).
+    </p>
+      <div class="block-code-format">
+        <p>h1{background-color: yellow;}</p>
+      </div>
+  </div>
+  <div class="main-text-area">
+    <h1><span>CSS Selectors</span></h1>
+    <p>
+      It is important to note that in CSS, the most specific rules apply all
+      elements related to those rules.
+    </p>
+    <ul>
+      <li><em>Tag selectors</em>
+        <ul>
+          <li>p, em, h1, h2, h3</li>
+          <li>Example: <span class="inline-code-format">p{color: green;}</span></li>
+          <li>Tag selectors are most useful when changing properties that are unique to that HTML element.</li>
+        </ul>
+      </li>
+      <li><em>Class selectors</em>
+        <ul>
+          <li>.class-name</li>
+          <li>Example: <span class="inline-code-format">.description{color: yellow;}</span></li>
+          <li>Class selectors are most useful and versatile</li>
+        </ul>
+      </li>
+      <li><em>ID selectors</em>
+        <ul>
+          <li>#id-name</li>
+          <li>Example: <span class="inline-code-format">#navigation{color: red;}</span></li>
+          <li>ID selectors are the most specific selectors and more difficult to override</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div class="main-text-area">
+    <h1><span>The Box</span></h1>
+    <h2><span>Margin, Border, and Padding</span></h2>
+    <p>Possible values for the margin, border and padding include:</p>
+      <ul>
+        <li>Pixels (<em>px</em>)</li>
+        <li>Percentage (<em>%</em>) for better user experience</li>
+      </ul>
+    <div class="block-code-format">
+      <p>
+        selector&#123;<br>
+        margin: 30px 30px;<br>
+        border: red solid 2px;<br>
+        padding: 10% 10%;<br>
+        &#125;
+      </p>
+    </div>
+    <h2><span>Simplifying the Box</span></h2>
+    <p>
+      Use <span class="inline-code-format">selector{box-sizing: border-box;}</span>
+      to make the calculation of the element size include both the border and the
+      padding. Note that margin is not included in the size.
+      <br><br>
+      <!-- Is it better to use <br><br> or break both paragraphs up into two <p>s -->
+      Also use browser-specific prefixes to make sure it displays properly across
+      browsers.
+    </p>
+    <div class="block-code-format">
+      <p>
+        -webkit-box-sizing: border-box;<br>
+        -moz-box-sizing: border-box;<br>
+        -ms-box-sizing: border-box;<br>
+      </p>
+    </div>
+    <h2><span>Flex Box</span></h2>
+    <p>
+      Use <span class="inline-code-format">selector{display: flex;}</span> to
+      allow &#60;div&#62;s to be positioned right next to each other as opposed to on top of each other.
+      <br><br>
+      For safari to display this properly, add the following declaration:
+      <div class="block-code-format">
+        <p>display: -webkit-flex;</p>
+      </div>
+      <p>
+        Visit the <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">Complete Guide to Flexbox</a> for more information on the topic.
+    </p>
+  </div>
+  <div class="main-text-area">
+    <h1><span>Useful CSS Tips</span></h1>
+    <h2><span>CSS References</span></h2>
+    <p>
+      There is no need to memorize the endless number of CSS properties and values.
+      If you forget them or simply want to learn more about CSS, just visit this
+      <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference">Mozilla Firefox CSS Reference</a>
+      or simply use our old friend Google!
+    </p>
+    <h2><span>Normalize</span></h2>
+    <p>
+      Default style rules sometimes differ between browsers so one can use
+      <a href="http://necolas.github.io/normalize.css/">normalize.css</a> to make
+      all browsers render all elements more consistently.
+    </p>
+  </div>
+  <div class="main-text-area">
+    <h1><span>Verifying CSS</span></h1>
+    <p>
+      There are multiple CSS validation services out there to help you keep errors
+      at bay. You can use this <a href="http://jigsaw.w3.org/css-validator/#validate_by_input">
+      W3C CSS Validation Service</a> or easily search for a CSS validator on Google.
+    </p>
+    <img src="images/css-validator.png" alt="CSS Validator">
+  </div>
+  <div class="footer-style">
+    <ul>
+      <li>Natthamon Wutilertcharoenwong</li>
+      <li>Introduction to Programming Student &#64; Udacity</li>
+    </ul>
+    <p>&#169; 2017 Natthamon Wutilertcharoenwong. All Rights Reserved.</p>
+  </div>
+</body>
+</html>

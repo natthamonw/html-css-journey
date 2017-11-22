@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>My Coding Journey - HTML</title>
+  <link rel="stylesheet" href="style-main.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat+Subrayada" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <!-- Navigation bar and header banner -->
+  <div id="www-banner">
+    <div class="navigation-bar">
+      <h1><i class="fa fa-code" aria-hidden="true" style="color:#3185FC"></i> My Coding Journey</h1>
+      <div class="navigation-links">
+        <table>
+          <tr>
+            <td><a href="landingpage.html">home</a></td>
+            <td><a href="www.html">www</a></td>
+            <td><a href="html.html">html</a></td>
+            <td><a href="css.html">css</a></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="banner-content-text">
+        <h1>www</h1>
+        <h2>The World Wide Web</h2>
+    </div>
+  </div>
+  <!-- Content area starts here -->
+  <!-- Am I right to repeat <div class="main-text-area"> every time I introduce
+  a new content section? Or should I have written one massive <div> and nestle
+  the entire content in there? -->
+  <div class="main-text-area">
+    <h1><span>Components of the Web</span></h1>
+    <div class="four-images">
+      <div class="image-and-caption">
+        <img src="images/browser.png" alt="Browser">
+        <h3>Browsers</h3>
+      </div>
+      <div class="image-and-caption">
+        <img src="images/internet.png" alt="Internet">
+        <h3>Internet</h3>
+      </div>
+      <div class="image-and-caption">
+        <img src="images/http.png" alt="HTTP">
+        <h3>HTTP</h3>
+      </div>
+      <div class="image-and-caption">
+        <img src="images/server.png" alt="Servers">
+        <h3>Servers</h3>
+      </div>
+    </div>
+    <p>
+      The <em>World Wide Web</em> is a collection of HTML documents. The
+      <em>internet</em> is the world's largest computer network. When the user
+      connects to the internet, she uses a <em>browser</em> that runs on a
+      computer to display files found on the web. The browser (e.g. Chrome,
+      Safari, Internet Explorer) does this via the <em>HTTP</em> protocol which
+      allows it to communicate with the <em>servers</em> or computers that host
+      the files that make up the web.
+    </p>
+    <p>For more information,
+      <a href="https://classroom.udacity.com/nanodegrees/nd000/parts/b920608d-be3c-4d5f-851f-6ab3eeb8997b/modules/8f2b6689-b7fd-4c54-9c13-99bb29278990/lessons/9a1a537b-3993-45b8-ad7e-6e44c8d57802/concepts/20a075f4-0788-4fa0-90fb-a740ad121b23">watch this video about the topic on Udacity</a>.
+    </p>
+  </div>
+  <div class="footer-style">
+    <ul>
+      <!-- I wanted to make my name yellow here. Not sure why assigning class
+      doesn't work. I also tried using:
+        <li><span class="highlight">Natthamon Wutilertcharoenwong</span></li>
+      but that also doesn't work. Could you advise? -->
+      <li class="highlight">Natthamon Wutilertcharoenwong</li>
+      <li>Introduction to Programming Student &#64; Udacity</li>
+    </ul>
+    <p>&#169; 2017 Natthamon Wutilertcharoenwong. All Rights Reserved.</p>
+  </div>
+</body>
+</html>

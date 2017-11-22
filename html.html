@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<!-- The HTML validator said that I should put lang="en" in the HTML tag for this
+HTML document and css.html. Not sure why it didn't suggest the same thing for
+landingpage.html and www.html -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Coding Journey - HTML</title>
+  <link rel="stylesheet" href="style-main.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat+Subrayada" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <!-- Navigation bar and header banner -->
+  <div id="html-banner">
+    <div class="navigation-bar">
+      <h1><i class="fa fa-code" aria-hidden="true" style="color:#3185FC"></i> My Coding Journey</h1>
+      <div class="navigation-links">
+        <table>
+          <tr>
+            <td><a href="landingpage.html">home</a></td>
+            <td><a href="www.html">www</a></td>
+            <td><a href="html.html">html</a></td>
+            <td><a href="css.html">css</a></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="banner-content-text">
+        <h1>HTML</h1>
+        <h2>Hypertext Markup Language</h2>
+    </div>
+  </div>
+  <!-- Content area starts here -->
+  <div class="main-text-area">
+    <h1><span>What is HTML?</span></h1>
+    <p>
+      HTML or Hypertext Markup Language is a standardized system for tagging
+      text files to achieve font, color, graphic, and hyperlink effects on World
+      Wide Web pages. HTML documents make up the heart of the Web and can do a
+      number of things.
+    </p>
+  </div>
+  <div class="main-text-area">
+    <h1><span>Components of HTML</span></h1>
+    <div class="four-images">
+      <div class="image-and-caption">
+        <img src="images/text-content.png" alt="Text Content">
+        <h3>Text Content</h3>
+        <p>What you see</p>
+      </div>
+      <div class="image-and-caption">
+        <img src="images/markup.png" alt="Markup">
+        <h3>Markups</h3>
+        <p>What it looks like</p>
+      </div>
+      <div class="image-and-caption">
+        <img src="images/references.png" alt="References">
+        <h3>References</h3>
+        <p>Images and videos</p>
+      </div>
+      <div class="image-and-caption">
+        <img src="images/links.png" alt="Links">
+        <h3>Links</h3>
+        <p>To other documents</p>
+      </div>
+    </div>
+    <p>For more information,
+      <a href="https://classroom.udacity.com/nanodegrees/nd000/parts/b920608d-be3c-4d5f-851f-6ab3eeb8997b/modules/8f2b6689-b7fd-4c54-9c13-99bb29278990/lessons/404b6925-2a6e-4617-8818-3bd890906f75/concepts/c09b2bfb-b82e-46e2-92c5-429f8b3ae262">watch this video about the topic on Udacity</a>.
+  </div>
+  <div class="main-text-area">
+    <h1><span>HTML Markups</span></h1>
+    <p>
+      <em>Markup element</em> includes an <em>opening tag</em>, <em>content</em>, and
+      a <em>closing tag</em>. In the example below, &#60;p&#62; is the opening
+      tag. "HTML is awesome!" is the content. &#60;/p&#62; is the closing tag.
+    </p>
+    <div class="block-code-format">
+      <!-- What is the difference between <div class="block-code-format">content</div>
+      and <div class="block-code-format"><p>content</p></div> I know that if I
+      add the <p> tag, I'll have to use .block-code-format p{} to style this.
+      Which one compiles to HTML/CSS best practices? -->
+      <p>&#60;p&#62;HTML is awesome!&#60;/p&#62;</p>
+    </div>
+    <p>
+      In the opening tag of an element, there may be one or more <em>attributes</em> with
+      their <em>values</em> assigned. In the example below, the img element has two
+      attributes: src and alt.
+    </p>
+    <div class="block-code-format">
+      <p>&#60;img src="images/cute-puppies.jpg" alt="Adorable puppies"&#62;</p>
+    </div>
+  </div>
+  <div class="main-text-area">
+    <h1><span>HTML Tags</span></h1>
+    <p>
+      HTML tags can be divided into two categories: <em>inline elements</em> and
+      <em>block elements</em>. Inline elements only take up as much width as they
+      need and does not force new lines while Block elements take up the full
+      width available, with a new line before and after the element.
+    </p>
+    <ul>
+      <li>Inline
+        <ul>
+          <li>Bold <span class="inline-code-format">&#60;b&#62;&#60;/b&#62;</span></li>
+          <li>Italics <span class="inline-code-format">&#60;em&#62;&#60;/em&#62;</span></li>
+          <li>Anchor <span class="inline-code-format">&#60;a href="..."&#62;&#60;/a&#62;</span></li>
+          <li>*Image <span class="inline-code-format">&#60;img&#62;</span></li>
+          <li>*Line break <span class="inline-code-format">&#60;br&#62;</span></li>
+          <li>Span <span class="inline-code-format">&#60;span&#62;&#60;/span&#62;</span></li>
+        </ul>
+      </li>
+      <li>Block
+        <ul>
+          <li>Paragraph <span class="inline-code-format">&#60;p&#62;&#60;/p&#62;</span></li>
+          <li>Div <span class="inline-code-format">&#60;div&#62;&#60;/div&#62;</span></li>
+        </ul>
+      </li>
+    </ul>
+    <p>
+      *These tags only have an opening tag and do not require a closing tag.
+      They are called <em>void tags</em>.
+    </p>
+  </div>
+  <div class="main-text-area">
+    <h1><span>Structure of HTML Documents</span></h1>
+    <div class="block-code-format">
+      <!-- When I try to use <ul> and <table> here, the font styles that are used
+      in .block-code-format don't apply. Why is that? That's why I'm using <p>
+      and a lot of <br>s instead. -->
+      <p>
+        &#60;!DOCTYPE html&#62;<br>
+        &#60;html&#62;<br>
+        &#60;head&#62;<br>
+        &#60;/head&#62;<br>
+        &#60;body&#62;<br>
+        &#60;/body&#62;<br>
+        &#60;/html&#62;<br>
+      </p>
+    </div>
+    <ul>
+      <li><em>&#60;!DOCTYPE html&#62;</em> is used to tell the browser that this is an HTML document</li>
+      <li><em>&#60;html&#62;</em> is the opening HTML tag</li>
+      <li><em>&#60;head&#62;</em> is the opening head tag holding the site title, links to CSS and Javascript, and meta data</li>
+      <li><em>&#60;/head&#62;</em> is the closing head tag</li>
+      <li><em>&#60;body&#62;</em> is the opening body tag where most of the visible content of the document is</li>
+      <li><em>&#60;/body&#62;</em> is the closing body tag</li>
+      <li><em>&#60;/html&#62;</em> is the closing HTML tag</li>
+    </ul>
+  </div>
+  <div class="main-text-area">
+    <h1><span>Verifying HTML</span></h1>
+    <p>
+      There are multiple HTML validators out there to help you keep errors
+      at bay. You can visit the following websites or easily search for an HTML
+      validator on Google.
+    </p>
+    <ul>
+      <li><a href="https://validator.w3.org/#validate_by_input">W3C Markup Validation Service</a></li>
+      <li><a href="https://h5validator.appspot.com/dcm/asset">HTML5 Validator</a></li>
+    </ul>
+    <img src="images/html-validator.png" alt="HTML Validator">
+  </div>
+  <div class="footer-style">
+    <ul>
+      <li>Natthamon Wutilertcharoenwong</li>
+      <li>Introduction to Programming Student &#64; Udacity</li>
+    </ul>
+    <p>&#169; 2017 Natthamon Wutilertcharoenwong. All Rights Reserved.</p>
+  </div>
+</body>
+</html>

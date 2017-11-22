@@ -1,0 +1,346 @@
+/* I've included a lot of questions I have about this project in the comments
+throughout the codes. It would mean the world to me if you could provide some
+feedback and pointers to the parts that I struggled on. Thank you so much for
+your time in advance! */
+
+/* How can I improve the overall structure of the CSS? I feel like I'm somewhat
+all over the place */
+
+*{
+  /* Make the calculation of the element size include both the border and the padding */
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  /* Get rid of the margin that comes with the standard setting */
+  margin: 0px;
+  font-family: 'Montserrat', sans-serif;
+  color: #242424;
+}
+
+h1{
+  text-align: center;
+  /* Reference: https://www.smashingmagazine.com/2016/05/fluid-typography/
+  selector{font-size: calc( 16px + (24 - 16) * (100vw - 400px) / (800 - 400) );} */
+  font-size: calc( 16px + (24 - 16) * (100vw - 400px) / 400 );
+  font-weight: 600;
+}
+
+h2{
+  text-align: left;
+  font-size: calc( 13px + (18 - 13) * (100vw - 400px) / 400 );
+  font-weight: 400;
+}
+
+h3{
+  text-align: center;
+  font-size: calc( 11px + (13 - 11) * (100vw - 400px) / 400 );
+  font-weight: 500;
+}
+
+p, ul{
+  font-size: calc( 11px + (13 - 11) * (100vw - 400px) / 400 );
+  font-weight: 300;
+  line-height: 1.5em;
+}
+
+ul{
+  padding-left: 12%;
+  padding-bottom: 3%;
+}
+
+a{
+  color: #3185FC;
+}
+
+em{
+  font-weight: 500;
+}
+
+.footer-style{
+  margin-top: 5%;
+  padding-left: 15%;
+  padding-right: 15%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  background-color: #242424;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.footer-style ul{
+  /* Reference: https://stackoverflow.com/questions/1027354/need-an-unordered-list-without-any-bullets */
+  list-style-type: none;
+  padding-left: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.footer-style li{
+  color: #F1F0EA;
+  font-weight: 200;
+  font-size: calc( 8px + (10 - 8) * (100vw - 400px) / 400 );
+}
+
+  .footer-style p{
+    color: #F1F0EA;
+    font-weight: 200;
+    font-size: calc( 8px + (10 - 8) * (100vw - 400px) / 400 );
+    text-align: right;
+    vertical-align: bottom;
+  }
+
+  /* I wanted to use this class to make some text yellow such as my name in the footer
+  but it's not working out */
+  .highlight{
+    color: #EDF060;
+  }
+
+.navigation-bar{
+  padding-left: 4%;
+  padding-right: 4%;
+  padding-top: 30px;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.navigation-bar h1{
+  color: #3185FC;
+  font-family: 'PT Sans Narrow', sans-serif;
+  text-transform: uppercase;
+  font-size: calc( 18px + (24 - 18) * (100vw - 400px) / 400 );
+}
+
+.navigation-links td{
+  padding: 1.1em;
+  font-size: calc( 8px + (10 - 8) * (100vw - 400px) / 400 );
+  text-transform: uppercase;
+  font-weight: 300;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.navigation-links a {
+  color: #F1F0EA;
+  /* Remove underlines from links */
+  text-decoration: none;
+}
+
+.navigation-links a:hover {
+  color: #3185FC;
+}
+
+/* I couldn't get this one to work. Could you advise? */
+.navigation-links a:active {
+  color: #3185FC;
+}
+
+/* Header text on the home page */
+/* I struggled to get the text vertically aligned in the middle here. When the
+window is minimized too small vertically, the text is no longer in the middle.
+Please provide feedback */
+/* Reference: http://vanseodesign.com/css/vertical-centering/ */
+.welcome-text{
+  text-align: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 35%;
+  margin: auto;
+}
+
+.welcome-text h1{
+  color: #EDF060;
+  font-family: 'Montserrat Subrayada', sans-serif;
+  font-size: calc( 36px + (50 - 36) * (100vw - 400px) / 400 );
+  text-transform: uppercase
+}
+
+.welcome-text h2{
+  color: #EDF060;
+  font-size: calc( 16px + (24 - 16) * (100vw - 400px) / 400 );
+  font-weight: 200;
+  text-align: center;
+}
+
+.welcome-text h3{
+  color: #EDF060;
+  font-size: calc( 12px + (18 - 12) * (100vw - 400px) / 400 );
+  font-weight: 200;
+}
+
+/* Header text on other pages other than the home page */
+/* Same vertical text align issue here as well */
+.banner-content-text{
+  text-align: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 50%;
+  margin: auto;
+}
+
+/* The text styling of .welcome-text and .banner-content-text is identical. Is
+there a better way to avoid repetition in this case? */
+.banner-content-text h1{
+  color: #EDF060;
+  font-family: 'Montserrat Subrayada', sans-serif;
+  font-size: calc( 36px + (50 - 36) * (100vw - 400px) / 400 );
+  text-transform: uppercase
+}
+
+.banner-content-text h2{
+  color: #EDF060;
+  font-size: calc( 16px + (24 - 16) * (100vw - 400px) / 400 );
+  font-weight: 200;
+  text-align: center;
+}
+
+/* The banner on the homepage */
+/* This one I managed to make it responsive. */
+/* Is this the right use of ID? Still struggling with class vs. ID */
+#landing-banner{
+  /* Add color filter to the background */
+  /* Reference: https://css-tricks.com/tinted-images-multiple-backgrounds/ */
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://static.pexels.com/photos/34153/pexels-photo.jpg);
+  /* Set rules to fill background */
+  /* Reference: https://css-tricks.com/perfect-full-page-background-image/ */
+  min-height: 100%;
+  min-width: 100%;
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* Set up background to cover the content area */
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* The banners on the rest of the pages */
+/* I couldn't figure out a way to make the banner images vertically responsive.
+Please provide feedback */
+/* Reference: http://codepen.io/anon/pen/EjzqEd */
+#www-banner{
+  background: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url(https://static.pexels.com/photos/41949/earth-earth-at-night-night-lights-41949.jpeg);
+  min-height: 400px;
+  width: 100%;
+  height: auto;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#html-banner{
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://static.pexels.com/photos/207153/pexels-photo-207153.jpeg);
+  min-height: 400px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#css-banner{
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(https://static.pexels.com/photos/276267/pexels-photo-276267.jpeg);
+  min-height: 400px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.main-text-area{
+  padding-left: 15%;
+  padding-right: 15%;
+  padding-top: 7%;
+
+}
+
+.main-text-area h1{
+  padding-bottom: 5%;
+}
+
+/* Reference: https://stackoverflow.com/questions/14310154/how-do-i-set-background-color-of-text-only-in-css */
+.main-text-area h1 span{
+  background-color: #EDF060;
+}
+
+.main-text-area h2{
+  padding-bottom: 5%;
+}
+
+.main-text-area h2 span{
+  background-color: #3185FC;
+}
+
+.main-text-area h3{
+  padding-bottom: 5%;
+}
+
+.main-text-area p{
+  padding-bottom: 5%;
+}
+
+.main-text-area img{
+  width: 100%;
+  height: auto;
+}
+
+.four-images{
+  padding-bottom: 5%;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-around;
+}
+
+.four-images img{
+  padding-bottom: 7%;
+  width: 70%;
+  height: auto;
+}
+
+.image-and-caption{
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-and-caption h3{
+  padding-bottom: 0px;
+}
+
+.block-code-format p{
+  margin: 0 10%;
+  margin-bottom: 5%;
+  padding: 2%;
+  padding-left: 5%;
+  background-color: #DADADA;
+  font-weight: 300;
+  font-size: calc( 11px + (13 - 11) * (100vw - 400px) / 400 );
+  font-family: Consolas, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New";
+}
+
+.inline-code-format{
+  padding: 0.3%;
+  background-color: #DADADA;
+  font-weight: 300;
+  font-size: calc( 11px + (13 - 11) * (100vw - 400px) / 400 );
+  font-family: Consolas, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New";
+}
